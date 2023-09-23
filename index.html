@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Card Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<style>
+    kbd {
+        background-color: #000000;
+        border-radius: 3px;
+        border: 1px solid #000000;
+        box-shadow:
+            0 1px 1px rgba(0, 0, 0, 0.2),
+            0 2px 0 0 rgba(0, 0, 0, 0.2) inset;
+        color: snow;
+        display: inline-block;
+        font-size: 0.85em;
+        font-weight: 700;
+        line-height: 1;
+        padding: 2px 4px;
+        white-space: nowrap;
+    }
+
+    kbd:hover {
+        transform: scale(1.075);
+        transition: all .5s ease-in-out;
+    }
+</style>
+
+<body>
+
+    <section class="grid lg:grid-cols-2 mb-32">
+
+        <form class=" lg:m-28 mx-10 my-16">
+            <h1 class="text-4xl text-indigo-600 mb-8">Please fill in the form</h1>
+            <div class="relative z-0 w-full mb-6 group">
+                <input autocomplete="off" type="text" name="fullName" id="fullName"
+                    class="block py-2.5 px-0 w-full lg:text-sm text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="fullName"
+                    class="peer-focus:font-medium absolute lg:text-sm text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full
+                    Name</label>
+            </div>
+            <div class="relative z-0 w-full mb-6 group">
+                <input autocomplete="off" type="date" name="dateOfBirth" id="dateOfBirth"
+                    class="block py-2.5 px-0 w-full lg:text-sm text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="dateOfBirth"
+                    class="peer-focus:font-medium absolute lg:text-sm text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Date
+                    of Birth</label>
+            </div>
+            <div class="relative z-0 w-full mb-6 group">
+                <input autocomplete="off" type="text" name="field" id="field"
+                    class="block py-2.5 px-0 w-full lg:text-sm text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" " required />
+                <label for="field"
+                    class="peer-focus:font-medium absolute lg:text-sm text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Field</label>
+            </div>
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-6 group">
+                    <input autocomplete="off" type="number" name="year" id="year"
+                        class="block py-2.5 px-0 w-full lg:text-sm text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="year"
+                        class="peer-focus:font-medium absolute lg:text-sm text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Year</label>
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <input autocomplete="off" type="number" name="subscription" id="subscription"
+                        class="block py-2.5 px-0 w-full lg:text-sm text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="subscription"
+                        class="peer-focus:font-medium absolute lg:text-sm text-base text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Subscription
+                        Number</label>
+                </div>
+            </div>
+
+            <div
+                class="w-[10%] text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg lg:text-sm text-base w-full sm:w-auto px-5 py-2.5 text-center mb-2">
+                <label for="upload">Upload an image</label>
+                <input autocomplete="off" onchange="loadImg(event)" type="file" accept="image/*" name="upload"
+                    id="upload" class="opacity-0 w-[0.1px] h-[0.1px] ">
+            </div>
+            <p class="lg:text-left text-center">Image must be in the Portrait form</p>
+
+        </form>
+
+
+        <div class="lg:mt-10">
+
+            <div id="cardPreview"
+                class="border-2 lg:w-[65%] lg:h-[45%] lg:mt-32 h-[100%] lg:mb-0.5 mb-1 rounded-lg mx-auto lg:mx-0">
+                <canvas class="rounded-t-lg">
+                    <div class="container bg-blue-700 text-white rounded-t-lg">
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center items-start justify-between w-[90%] mx-auto">
+                            <div class="flex flex-col">
+                                <h1 class="flex-grow text-2xl font-medium title-font">Campus Card</h1>
+                                <h1 class="flex-grow pl-2 text-lg font-medium title-font">Undergraduate</h1>
+                            </div>
+                            <a href="/school.jpg" class="w-[13%]">
+                                <img class=" rounded-md py-2" id="schoolLogo" src="/school.jpg" alt="schoolLogo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="w-[90%] mx-auto grid grid-cols-2 items-center justify-between">
+                        <div class="mt-4 flex">
+                            <img class="w-[50%]" id="studentImg" src="" alt="studentImg">
+                        </div>
+                        <ul class="-translate-x-20">
+                            <li class="leading-relaxed text-base" id="inName"></li>
+                            <li class="leading-relaxed text-base" id="inBirth"></li>
+                            <li class="leading-relaxed text-base" id="inFieldYear"></li>
+                            <li class="leading-relaxed text-base"> SubN° <span id="inSubscriptionNum"></span> </li>
+                        </ul>
+                    </div>
+                </canvas>
+            </div>
+
+            <div class="flex justify-center lg:justify-start">
+                <button id="preview" class="mr-2"><kbd> Preview </kbd></button>
+                <button id="download"><kbd> Download </kbd></button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="/index.js"></script>
+
+</body>
+
+</html>
